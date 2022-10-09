@@ -1,6 +1,6 @@
 # aphrodite
 
-
+Сервис хранения анкет пользователей
 
 ## Getting started
 
