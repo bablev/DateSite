@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="FormService:war">
+    <output-path>$PROJECT_DIR$/FormService/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>FormService</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="FormService.war">
+      <element id="artifact" artifact-name="FormService:war exploded" />
+    </root>
+  </artifact>
+</component>
