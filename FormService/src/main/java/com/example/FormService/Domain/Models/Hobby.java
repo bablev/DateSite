@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -19,20 +20,9 @@ public class Hobby {
     private int id;
     @Column(name = "Hobby_name", length = 20)
     private String hobby_name;
-    public long getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getHobby_name() {
-        return hobby_name;
-    }
-
-    public void setHobby_name(String hobby_name) {
+    public Hobby(String hobby_name, int id){
         this.hobby_name = hobby_name;
+        this.id = id;
     }
 
 }

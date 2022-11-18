@@ -38,17 +38,17 @@ public class User_Form {
     private String name;
     @Column(name = "date_birth")
     private java.sql.Date date_birth;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Sex sex;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Sex interestedsex;
     @JoinTable(name = "user_formshobbies",
             joinColumns = @JoinColumn(name = "user_formid"),
             inverseJoinColumns = @JoinColumn(name = "hobbyid")
     )
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     private List<Hobby> hobbyList;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Sexual_Orientation sexualorientation;
     @Column(name = "updated_at")
     private java.sql.Timestamp updated_at;
@@ -59,7 +59,7 @@ public class User_Form {
         Deleted
     }
 
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
     @Type(type = "pgsql_enum")
     @Column(name = "Status")
     private Status status;
