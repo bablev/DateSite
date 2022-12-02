@@ -1,21 +1,12 @@
 package com.example.FormService.DTO;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.hibernate.annotations.NotFound;
+import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.NotEmpty;
-import java.util.List;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 
-@Data
-public class FormDTO {
-    private int owner_id;
-    @NotEmpty(message = "Please provide a name")
-    private String name;
-    private java.sql.Date date_birth;
-    @NotEmpty(message = "Please provide a sex")
-    private String sex;
-    @NotEmpty(message = "Please provide a interested sex")
-    private String interestedSex;
-    private String sexualOrientation;
-    private List<String> hobbie s;
+public abstract class FormDTO {
+
 }

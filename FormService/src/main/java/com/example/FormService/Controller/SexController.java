@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(path = "api/profile/sex")
+@RequestMapping(path = "api/profiles/sex")
 public class SexController {
     private final SexService sexService;
     public SexController(SexService sexService) {

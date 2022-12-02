@@ -18,22 +18,26 @@ import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Timestamp;
 import java.util.List;
-@TypeDef(
-        name = "pgsql_enum",
-        typeClass = PostgreSQLEnumType.class
-)
+
 @Builder
 @Table(name = "user_form")
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@TypeDef(
+        name = "pgsql_enum",
+        typeClass = PostgreSQLEnumType.class
+)
 public class User_Form {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "form_generator")
+    @SequenceGenerator(name="form_generator", sequenceName = "form_seq")
     private int id;
     @Column(name = "owner_id")
     private int owner_id;
+    @Column(name = "age")
+    private int age;
     @Column(name = "name", length = 50)
     private String name;
     @Column(name = "date_birth")

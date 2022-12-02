@@ -4,10 +4,12 @@ import com.example.FormService.Domain.Models.Sexual_Orientation;
 import com.example.FormService.Domain.Repos.Interfaces.SexualOrientationRepository;
 import com.example.FormService.Service.Interfaces.SexualOrientationService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional(readOnly = true)
 public class SexualOrientationServiceImpl implements SexualOrientationService {
     private final SexualOrientationRepository sexualOrientationRepository;
 

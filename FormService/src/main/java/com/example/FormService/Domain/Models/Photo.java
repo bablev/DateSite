@@ -8,10 +8,10 @@ import java.util.List;
 @Entity
 public class Photo {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(
-            columnDefinition = "NUMERIC(19,0)"
-    )
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "form_generator")
+    @SequenceGenerator(name="form_generator", sequenceName = "form_seq")
     private int id;
     private int photo_id;
+    @ManyToOne
+    private User_Form user_form;
 }

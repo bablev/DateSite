@@ -6,11 +6,12 @@ import com.example.FormService.Domain.Repos.Interfaces.SexRepository;
 import com.example.FormService.Service.Interfaces.SexService;
 import com.example.FormService.Utils.SexConvertor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
+@Transactional(readOnly = true)
 public class SexServiceImpl implements SexService {
     private final SexConvertor sexConvertor;
     private final SexRepository sexRepository;

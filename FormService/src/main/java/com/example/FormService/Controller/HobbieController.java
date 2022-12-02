@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(path="api/profile/hobbies",
+@RequestMapping(path="api/profiles/hobbies",
         produces = "application/json"
 )
 public class HobbieController {

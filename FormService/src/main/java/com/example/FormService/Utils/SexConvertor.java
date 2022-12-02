@@ -1,9 +1,7 @@
 package com.example.FormService.Utils;
 
-import com.example.FormService.DTO.FormDTO;
 import com.example.FormService.DTO.SexDTO;
 import com.example.FormService.Domain.Models.Sex;
-import com.example.FormService.Domain.Models.User_Form;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 

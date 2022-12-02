@@ -1,7 +1,8 @@
-package com.example.FormService.Domain.Repos;
+package com.example.FormService.Domain.Repos.Implementation;
 
 import com.example.FormService.Domain.Models.Photo;
 import com.example.FormService.Domain.Models.User_Form;
+import com.example.FormService.Domain.Repos.Interfaces.CustomFormRepository;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
